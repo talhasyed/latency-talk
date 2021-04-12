@@ -81,7 +81,7 @@ But why is p99 (or more) latency important? It affects only 1% of requests, so w
 
 > [CC BY-SA 3.0](https://commons.wikimedia.org/w/index.php?curid=641362)
 
-- Latency is usually multimodal. This may be due to downstream spikes, something about how your program fits into cache, how your DB is partitiioned, an indication of some underlying infrastructure quirks etc
+- Latency is usually multimodal. This may be due to downstream spikes, something about how your program fits into cache, how your DB is partitioned, an indication of some underlying infrastructure quirks etc
 - It is useless to look at means or p50s, or even averages of p99s. You need to understand the behavioural characteristics of the latency in your system
 
 ---
@@ -131,7 +131,7 @@ The 99th percentile is what our users will actually be affected by, not the 50th
 [.build-lists: true]
 
 - Parallelization
-- Optimiization
+- Optimization
 - Deferrment
   - In React, `Suspense`!
 
@@ -209,10 +209,23 @@ The 99th percentile is what our users will actually be affected by, not the 50th
 
 ---
 
+## We (mostly) measure tail latency wrong
+
+Self Measurement problem
+
+---
+
+## Service time vs response time
+
+Coffee shop example
+
+---
+
 ## Tools to measure latency correctly
 
 - [wrk2](https://github.com/giltene/wrk2)
 - [HdrHistogram](http://hdrhistogram.github.io/HdrHistogram/)
+- Gatling
 
 ---
 
@@ -249,7 +262,7 @@ The 99th percentile is what our users will actually be affected by, not the 50th
 ### Articles & Papers
 
 - ["How NOT to Measure Latency" by Gil Tene](https://youtu.be/lJ8ydIuPFeU)
-- [@tacertain tweet about p99 latency](https://twitter.com/tacertain/*status/1132391299733000193)
+- [@tacertain tweet about p99 latency](https://twitter.com/tacertain/status/1132391299733000193)
 - [Warehouse-Scale Computing: Entering the Teenage Decade](https://dl.acm.org/citation.cfm?id=2019527)
 - [You can learn a lot from a histogram](http://amistrongeryet.blogspot.com/2010/04/you-can-learn-lot-from-histogram.html)
 - [You can't average percentiles. Period.](http://latencytipoftheday.blogspot.com/2014/06/latencytipoftheday-you-cant-average.html)
